@@ -10,7 +10,7 @@
 
 #import "AppDelegate.h"
 #import "GameConfig.h"
-#import "HelloWorldLayer.h"
+#import "MenuScene.h"
 #import "RootViewController.h"
 
 @implementation AppDelegate
@@ -70,8 +70,8 @@
 	[director setOpenGLView:glView];
 	
 //	// Enables High Res mode (Retina Display) on iPhone 4 and maintains low res on all other devices
-//	if( ! [director enableRetinaDisplay:YES] )
-//		CCLOG(@"Retina Display Not supported");
+	if( ! [director enableRetinaDisplay:YES] )
+		CCLOG(@"Retina Display Not supported");
 	
 	//
 	// VERY IMPORTANT:
@@ -89,7 +89,7 @@
 #endif
 	
 	[director setAnimationInterval:1.0/60];
-	[director setDisplayFPS:YES];
+	//[director setDisplayFPS:YES];
 	
 	
 	// make the OpenGLView a child of the view controller
@@ -110,7 +110,7 @@
 	[self removeStartupFlicker];
 	
 	// Run the intro Scene
-	[[CCDirector sharedDirector] runWithScene: [HelloWorldLayer scene]];
+	[[CCDirector sharedDirector] runWithScene: [MenuScene scene]];
 }
 
 
