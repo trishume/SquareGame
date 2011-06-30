@@ -29,6 +29,12 @@
     double sTime;
     NSUInteger maxScore;
     double lastFrame;
+    
+    CCLayer *menuLayer;
+    
+    BOOL playing;
+    
+    NSUInteger controlMode;
 }
 
 // returns a CCScene that contains the HelloWorldLayer as the only child
@@ -38,5 +44,7 @@
 
 - (UISwipeGestureRecognizer *)watchForSwipe:(SEL)selector forDir:(UISwipeGestureRecognizerDirection)direction;
 - (void)unwatch:(UIGestureRecognizer *)gr;
+- (void) died;
+- (void) submitScore:(NSUInteger)score;
 
 @end

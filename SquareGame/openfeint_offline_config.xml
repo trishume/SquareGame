@@ -1,0 +1,96 @@
+<resources>
+<game_profile_page_info>
+  <has_ipurchase>true</has_ipurchase>
+  <is_owned_by_local_player>true</is_owned_by_local_player>
+  <has_chat_rooms>false</has_chat_rooms>
+  <icon_url>http://cdn0.api.openfeint.com/uploads/application_descriptions/h_icons/60/93/d3/4d/58692/Icon-OpenFeint.png</icon_url>
+  <has_challenges>false</has_challenges>
+  <suggestions_topic_id>865624</suggestions_topic_id>
+  <has_achievements>false</has_achievements>
+  <has_featured_application>true</has_featured_application>
+  <short_name>SquareGame</short_name>
+  <name>SquareGame</name>
+  <has_leaderboards>true</has_leaderboards>
+  <id>313532</id>
+  <timestamp>2011-06-29 13:44:29</timestamp>
+</game_profile_page_info>
+<offline>
+<timestamp>2011-06-29 13:44:29</timestamp>
+<leaderboards>
+<leaderboard>
+<id>802986</id>
+<name>All Modes</name>
+<active>true</active>
+<visible>true</visible>
+<allow_posting_lower_scores>false</allow_posting_lower_scores>
+<client_application_id>313532</client_application_id>
+<descending_sort_order>true</descending_sort_order>
+<created_at>2011-06-29 13:29:24 UTC</created_at>
+<updated_at>2011-06-29 13:30:04 UTC</updated_at>
+<start_version>0000.00.00</start_version>
+<end_version>9999.99.99</end_version>
+<position>1</position>
+<reached_at></reached_at>
+<display_text></display_text>
+<custom_data></custom_data>
+<score></score>
+<timestamp>2011-06-29 13:44:29</timestamp>
+</leaderboard>
+<leaderboard>
+<id>802966</id>
+<name>Swipe Mode</name>
+<active>true</active>
+<visible>true</visible>
+<allow_posting_lower_scores>false</allow_posting_lower_scores>
+<client_application_id>313532</client_application_id>
+<descending_sort_order>true</descending_sort_order>
+<created_at>2011-06-29 13:28:16 UTC</created_at>
+<updated_at>2011-06-29 13:30:05 UTC</updated_at>
+<start_version>0000.00.00</start_version>
+<end_version>9999.99.99</end_version>
+<position>2</position>
+<reached_at></reached_at>
+<display_text></display_text>
+<custom_data></custom_data>
+<score></score>
+<timestamp>2011-06-29 13:44:29</timestamp>
+</leaderboard>
+<leaderboard>
+<id>802976</id>
+<name>Touch Mode</name>
+<active>true</active>
+<visible>true</visible>
+<allow_posting_lower_scores>false</allow_posting_lower_scores>
+<client_application_id>313532</client_application_id>
+<descending_sort_order>true</descending_sort_order>
+<created_at>2011-06-29 13:28:39 UTC</created_at>
+<updated_at>2011-06-29 13:30:05 UTC</updated_at>
+<start_version>0000.00.00</start_version>
+<end_version>9999.99.99</end_version>
+<position>3</position>
+<reached_at></reached_at>
+<display_text></display_text>
+<custom_data></custom_data>
+<score></score>
+<timestamp>2011-06-29 13:44:29</timestamp>
+</leaderboard>
+</leaderboards>
+<leaderboard_aggregations>
+<leaderboard_aggregation>
+<id>44212</id>
+<aggregate_leaderboard_id>802986</aggregate_leaderboard_id>
+<leaderboard_pushing_changes_id>802966</leaderboard_pushing_changes_id>
+<created_at>2011-06-29 13:30:16 UTC</created_at>
+<updated_at>2011-06-29 13:30:16 UTC</updated_at>
+</leaderboard_aggregation>
+<leaderboard_aggregation>
+<id>44222</id>
+<aggregate_leaderboard_id>802986</aggregate_leaderboard_id>
+<leaderboard_pushing_changes_id>802976</leaderboard_pushing_changes_id>
+<created_at>2011-06-29 13:30:28 UTC</created_at>
+<updated_at>2011-06-29 13:30:28 UTC</updated_at>
+</leaderboard_aggregation>
+</leaderboard_aggregations>
+</offline>
+
+</resources>

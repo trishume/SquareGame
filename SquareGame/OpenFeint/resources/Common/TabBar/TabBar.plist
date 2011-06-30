@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>offlineTab</key>
+	<string>GameProfile</string>
+	<key>defaultTab</key>
+	<string>GameProfile</string>
+	<key>tabs</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>ShortName</string>
+			<key>disabledImage</key>
+			<string></string>
+			<key>inactiveImage</key>
+			<string>OFDashboardTabNowPlaying%@.png</string>
+			<key>badge</key>
+			<string>nowPlayingBadge</string>
+			<key>activeImage</key>
+			<string>OFDashboardTabNowPlaying%@Hit.png</string>
+			<key>disabled</key>
+			<string>EnableOpenFeintInDashboard</string>
+			<key>controller</key>
+			<string>GameProfile</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>My Feint</string>
+			<key>disabledImage</key>
+			<string>OFDashboardTabMyFeint%@Disabled.png</string>
+			<key>inactiveImage</key>
+			<string>OFDashboardTabMyFeint%@.png</string>
+			<key>badge</key>
+			<string>myFeintBadge</string>
+			<key>activeImage</key>
+			<string>OFDashboardTabMyFeint%@Hit.png</string>
+			<key>disabled</key>
+			<string></string>
+			<key>controller</key>
+			<string>MyFeint</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Games</string>
+			<key>disabledImage</key>
+			<string>OFDashboardTabDiscovery%@Disabled.png</string>
+			<key>inactiveImage</key>
+			<string>OFDashboardTabDiscovery%@.png</string>
+			<key>badge</key>
+			<string></string>
+			<key>activeImage</key>
+			<string>OFDashboardTabDiscovery%@Hit.png</string>
+			<key>disabled</key>
+			<string></string>
+			<key>controller</key>
+			<string>GameDiscovery</string>
+		</dict>
+	</array>
+</dict>
+</plist>
