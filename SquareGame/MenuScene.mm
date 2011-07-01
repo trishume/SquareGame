@@ -8,7 +8,9 @@
 
 #import "MenuScene.h"
 #import "SquaresLayer.h"
-#import "GameCenterManager.h"
+//#import "GameCenterManager.h"
+#import "ControlsMenu.h"
+#import "OpenFeint.h"
 
 @implementation MenuScene
 
@@ -28,8 +30,7 @@
     
     if( (self=[super init] )) {
         CGSize size = [[CCDirector sharedDirector] winSize];
-        CCSprite *menuBG = [CCSprite spriteWithFile:@"MenuBG.png" 
-                                     rect:CGRectMake(0, 0, 480, 320)];
+        CCSprite *menuBG = [CCSprite spriteWithFile:@"MenuBG.png"];
         menuBG.position = ccp(size.width/2,size.height/2);
         [self addChild:menuBG];
         
@@ -44,11 +45,14 @@
         CCMenu *menu = [CCMenu menuWithItems: startButton, nil];*/
         [CCMenuItemFont setFontSize:90];
         CCMenuItem *start = [CCMenuItemFont itemFromString:@"PLAY" target:self selector:@selector(startGame:)];
+        [CCMenuItemFont setFontSize:45];
+        CCMenuItem *controls = [CCMenuItemFont itemFromString:@"OPTIONS" target:self selector:@selector(chooseControls)];
+        CCMenuItem *of = [CCMenuItemFont itemFromString:@"OpenFeint" target:self selector:@selector(openOpenFeint)];
         
         
         // Creating menu and adding items
-        CCMenu *menu = [CCMenu menuWithItems:start, nil];
-        menu.position = ccp(size.width/2 - 7,size.height/2);
+        CCMenu *menu = [CCMenu menuWithItems:start,controls,of, nil];
+        menu.position = ccp(size.width/2 - 7,size.height/2 - 40);
         // Set menu alignment to vertical
         [menu alignItemsVertically];
         
@@ -59,15 +63,17 @@
     return self;
 }
 
-- (void) authenticateLocalPlayer
-{
-    [GameCenterManager authenticateLocalUser];
+- (void) openOpenFeint {
+    [OpenFeint launchDashboard];
 }
 
 - (void) startGame: (id) sender
 {
     //[[CCDirector sharedDirector] replaceScene:[SquaresLayer scene]];
     [[CCDirector sharedDirector] replaceScene:[CCTransitionSplitRows transitionWithDuration:0.6 scene:[SquaresLayer node]]];
+}
+- (void) chooseControls {
+    [[CCDirector sharedDirector] replaceScene:[CCTransitionSlideInR transitionWithDuration:0.6 scene:[ControlsMenu node]]];
 }
 
 - (void) dealloc

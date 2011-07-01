@@ -7,11 +7,13 @@
 //
 
 #import "cocos2d.h"
+#import "OpenFeint.h"
 
 #import "AppDelegate.h"
 #import "GameConfig.h"
 #import "MenuScene.h"
 #import "RootViewController.h"
+#import "SimpleOFDelegate.h"
 
 @implementation AppDelegate
 
@@ -108,7 +110,19 @@
 	
 	// Removes the startup flicker
 	[self removeStartupFlicker];
+    
+    //start OpenFeint
 	
+    NSDictionary* settings = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:UIInterfaceOrientationLandscapeRight], OpenFeintSettingDashboardOrientation, [NSNumber numberWithBool:YES],OpenFeintSettingDisableUserGeneratedContent, nil];
+    ofDelegate = [SimpleOFDelegate new];
+    OFDelegatesContainer* delegates = [OFDelegatesContainer containerWithOpenFeintDelegate: ofDelegate];
+    [OpenFeint initializeWithProductKey:@"gm8xCkhFeSA8iFOm76IAIQ"
+                              andSecret:@"EiBa1BNOtQ3pfSMroeJryJ24nJkRmih2uu0t9CG0"
+                         andDisplayName:@"SquareGame"
+                            andSettings:settings    // see OpenFeintSettings.h
+                           andDelegates:delegates]; // see OFDelegatesContainer.h
+
+    
 	// Run the intro Scene
 	[[CCDirector sharedDirector] runWithScene: [MenuScene scene]];
 }
@@ -116,10 +130,14 @@
 
 - (void)applicationWillResignActive:(UIApplication *)application {
 	[[CCDirector sharedDirector] pause];
+    //[OpenFeint applicationWillResignActive]; // Add for OpenFeint
+
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
 	[[CCDirector sharedDirector] resume];
+    //[OpenFeint applicationDidBecomeActive]; // Add for OpenFeint
+
 }
 
 - (void)applicationDidReceiveMemoryWarning:(UIApplication *)application {
@@ -143,7 +161,9 @@
 	
 	[window release];
 	
-	[director end];	
+	[director end];
+    [OpenFeint shutdown];
+	[[NSUserDefaults standardUserDefaults] synchronize]; // Add for OpenFeint
 }
 
 - (void)applicationSignificantTimeChange:(UIApplication *)application {
